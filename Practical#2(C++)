@@ -1,0 +1,99 @@
+#include <iostream>
+#include<string>
+#include <cmath>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	int operations;
+	cout << "Выбирете задачу" << endl
+		<< "Задача №1" << endl
+		<< "Задача №2" << endl
+		<< "Задача №3" << endl
+		<< "Задача №4" << endl
+		<< endl;
+	cin >> operations;
+	switch (operations) {
+	case 1: {
+		cout << "Решить квадратное уравнение" << endl;
+		double a;
+		double b;
+		double c;
+		double d = 1;
+		double x1;
+		double x2;
+		cout << "Введите значение А  " << endl;
+		cin >> a;
+		cout << "Введите значение B  " << endl;
+		cin >> b;
+		cout << "Введите значение С  " << endl;
+		cin >> c;
+
+		d = (b * b) - (4 * a * c);
+		cout << "D=" << d << endl;
+		if (d < 0) {
+			cout << "D не имеет корней" << endl;
+
+		}
+		else {
+			cout << "x1=" << sqrt(d) << endl;
+			cout << "x2=" << -(sqrt(d)) << endl;
+		}
+		if (d == 0) {
+			cout << "D имеет один корень " << endl;
+		}
+		break;
+	}
+	case 2: {
+		cout << "Решить уравнение a|x|=b" << endl;
+		int q;
+		int w;
+		cout << "Ведите значения А и X" << endl;
+		cout << "Значение А=" << endl;
+		cin >> q;
+		cout << "Значение Х=" << endl;
+		cin >> w;
+		cout << "B=" << (q * abs(w)) << endl;
+		break;
+	}
+	case 3: {
+		cout << "Определить делится ли число А на В без остатка" << endl;
+		int e;
+		int r;
+		cout << "Введите А" << endl;
+		cin >> e;
+		cout << "Введите В" << endl;
+		cin >> r;
+		if (e % r == 0) {
+			cout << "Делится без остатка" << endl;
+		}
+		else {
+			cout << "Остаток равен" << " " << e % r << endl;
+		}
+		break;
+	}
+	case 4: {
+		cout << "Определить билет, имеющий счастливый номер" << endl;
+
+			int number;
+			int a,s,d,f,g,h;
+			cout << "Введите номер билета: ";
+			cin >> number;
+			a = number / 100000;
+			s = (number % 100000) / 10000;
+			d = (number % 10000) / 1000;
+			f = (number % 1000) / 100;
+			g = (number % 100) / 10;
+			h = number % 10;
+			if (a + s + d == f + g + h)
+			{
+				cout << "Повезло" << endl;;
+			}
+			else
+			{
+				cout << "Не повезло , не фартануло";
+			}
+		}
+		  break;
+	}	
+	}
