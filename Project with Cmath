@@ -1,0 +1,95 @@
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+	using namespace std;
+	setlocale(LC_ALL, "Rus");
+	int operations;
+	cout << "Выбирете задачу" << endl
+		<< "Задача №1" << endl
+		<< "Задача №2" << endl
+		<< "Задача №3" << endl
+		<< "Задача №4" << endl
+		<< endl;
+	cin >> operations;
+	switch (operations) {
+	case 1: {
+		cout << "Решить квадратное уравнение" << endl;
+		double a;
+		double b;
+		double c;
+		double d = 1;
+		double x1;
+		double x2;
+		cout << "Введите значение А  " << endl;
+		cin >> a;
+		cout << "Введите значение B  " << endl;
+		cin >> b;
+		cout << "Введите значение С  " << endl;
+		cin >> c;
+
+		d = (b * b) - (4 * a * c);
+		cout << "D=" << d << endl;
+		if (d < 0) {
+			cout << "D не имеет корней" << endl;
+
+		}
+		else {
+			cout << "x1=" << sqrt(d) << endl;
+			cout << "x2=" << -(sqrt(d)) << endl;
+		}
+		if (d == 0) {
+			cout << "D имеет один корень " << endl;
+		}
+		break;
+	}
+	case 2: {
+		cout << "Решить уравнение a|x|=b" << endl;
+		int q;
+		int w;
+		cout << "Ведите значения А и X" << endl;
+		cout << "Значение А=" << endl;
+		cin >> q;
+		cout << "Значение Х=" << endl;
+		cin >> w;
+		cout << "B=" << (q * abs(w)) << endl;
+		break;
+	}
+	case 3: {
+		cout << "Определить делится ли число А на В без остатка" << endl;
+		int e;
+		int r;
+		cout << "Введите А" << endl;
+		cin >> e;
+		cout << "Введите В" << endl;
+		cin >> r;
+		if (e % r == 0) {
+			cout << "Делится без остатка" << endl;
+		}
+		else {
+			cout << "Остаток равен" << " " << e % r << endl;
+		}
+		break;
+	}
+	case 4: {
+		cout << "Определить билет, имеющий счастливый номер" << endl;
+		int a1;
+		int a2;
+		int a3;
+		int a4;
+		int a5;
+		int a6;
+		cout << "Введите номер билета " << endl;
+		cin >> a1 >> a2 >> a3 >> a4 >> a5 >> a6;
+		if (a1 + a2 + a3 == a4 + a5 + a6) {
+			cout << "Повезло.....";
+		}
+		else {
+			cout << "Не получилось , не фартануло";
+		}
+		break;
+	}
+	}
+		return 0;
+	}
