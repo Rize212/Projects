@@ -1,0 +1,168 @@
+#include <iostream>
+#include<cmath>
+#include<string>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	int operations;
+	cout << "Выберете номер задания:  " << endl;
+	cout << "Задание №1" << endl
+		<< "Задание №2" << endl
+		<< "Задание №3" << endl
+		<< "Задание №4" << endl
+		<< "Задание №5" << endl
+		<< "Задание №6" << endl
+		<< "Задание №7" << endl
+		<< "Задание №8" << endl
+		<< "Задание №9" << endl;
+	cin >> operations;
+	switch (operations) {
+	case 1: {
+		char name, age, adress, groop, music, film, hobbie;
+		cout << "Привет," << "Как тебя зовут?" << endl;
+		cin >> name;
+		cout << "Сколько тебе лет?" << endl;
+		cin >> age;
+		cout << "Какой у тебя адресс?" << endl;
+		cin >> adress;
+		cout << "В какой ты группе?" << endl;
+		cin >> groop;
+		cout << "Какую музыку слушаешь?" << endl;
+		cin >> music;
+		cout << "Какие фильмы предпочитаешь?" << endl;
+		cin >> film;
+		cout << "Какие у тебя есть хобии?" << endl;
+		cin >> hobbie;
+		break;
+	}
+	case(2): {
+		int a, b, c;
+
+		cout << "Введите А  ";
+		cin >> a;
+		cout << "Введите В  ";
+		cin >> b;
+		cout << "Введите С  ";
+		cin >> c;
+		if (a > b && a > c) {
+			cout << "max=a" << "  A=" << a;
+		}
+		else {
+			b > a&& b > c;
+			cout << "max=b" << " B=" << b << endl;
+
+			if (c > b && c > a) {
+				cout << "max=c" << " C=" << c << endl;
+			}
+
+
+
+		}
+		break;
+	}
+	case(3): {
+		int t;
+		for (t = 0; t < 100; t++) {
+			cout << pow(2, t) << endl;
+			if (t == 10) break;
+		}
+		int in_num;
+		do {
+			cout << "enter number" << endl;
+			cin >> in_num;
+			if (in_num > 100 || in_num < 0) continue;
+			cout << "Квадрат = " << in_num * in_num << endl;
+		} while (in_num >= 0);
+		system("pause");
+		break;
+
+	}
+	case(4): {
+		double z;
+	tryAgain://Метка
+		cout << "Enter a non-negative number";
+		cin >> z;
+		if (z < 0.0)
+			goto tryAgain;//Возврат к метке
+		cout << "The sqrt of " << z << " is " << sqrt(z) << endl;
+		system("pause");
+		break;
+	}
+	case(5): {
+		int n1[5] = { 1,2,3,4,5 };
+		int n2[5] = { 6,7,8,9,10 };
+		int n3[5];
+		for (int i = 0; i < 5; i++) {
+			if (n1[i] > n2[i]) {
+				n3[i] = n1[i];
+			}
+			else {
+				n3[i] = n2[i];
+			}
+			cout << "  " << n3[i];
+		}
+		break;
+
+	}
+	case(6): {
+		int m1[5] = { 1,2,3,4,5 };
+		int maxi = m1[0];
+		for (int i = 0; i < 5; i++) {
+			if (m1[i] > maxi) {
+				maxi = m1[i];
+
+			}
+
+		}
+		cout << maxi << "  ";
+		break;
+	}
+	case(7): {
+		int q1[5] = { 1,2,3,4,5 };
+		int minni = q1[0];
+		for (int i = 0; i < 5; i++) {
+			if (q1[i] < minni) {
+				minni = q1[i];
+
+			}
+
+		}
+		cout << minni << "  ";
+		break;
+	}
+	case(8): {
+		int w1[5] = { 1,2,3,4,5 };
+		int middle = 0;
+		for (int i = 0; i < 5; i++) {
+			middle += w1[i];
+		}
+		cout << middle / 5 << "  ";
+		break;
+
+
+	}
+	case 9: {
+		int num1[4][4] = {
+			{1,2,3,5},
+			{4,5,12,10},
+			{1,7,2,9},
+			{2,4,9,7}
+		};
+		int num2 =num2;
+		int sum1 = 0;
+		for (int j = 0; j < 4; j++) {
+			for (int i = 0; i < 4; i++) {
+				num2[i][j] = num1[j][i];
+			}
+			sum1 = sum1 + num1[j][3+j];
+			cout << num1[j][3+j];
+
+		}
+		cout << sum1 << "" << endl;
+	}
+		  return 0;
+
+	}
+}
+	
