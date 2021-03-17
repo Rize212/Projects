@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+
+int main()
+
+{
+	using namespace std;
+	setlocale(LC_ALL, "Rus");
+	int x;
+	int y;
+	cout << "Введите значение переменных\n";
+	cout << "x=";
+		cin >> x;
+	cout << "y=";
+		cin >> y;
+	
+	cout << "c=" << pow(x, 2)  + pow(y, 3) - y * (1 - x) / (abs(x) + y);
+
+};
